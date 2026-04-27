@@ -1,0 +1,228 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #0b0d12, #7c92f7);
+    color: #e6e8ef;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== LAYOUT ===== */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    position: relative;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(96,165,250,0.05), transparent 70%);
+    pointer-events: none;
+}
+
+/* ===== TITULOS ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #60a5fa;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: linear-gradient(135deg, #6ee7b7, #60a5fa);
+    border-radius: 10px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #60a5fa;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+    color: #6ee7b7;
+    margin: 10px 0;
+}
+
+.hero p {
+    color: #b1b7c6;
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* ===== BOTONES ===== */
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6ee7b7, #60a5fa);
+    color: #0b0d12;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(96,165,250,0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #60a5fa;
+    color: #60a5fa;
+}
+
+/* ===== SOBRE MI ===== */
+.sobre-mi p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ===== TECNOLOGIAS ===== */
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech {
+    background: #121520;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.tech img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.tech span {
+    font-size: 0.9rem;
+}
+
+.tech:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #6ee7b7, #60a5fa);
+    color: #0b0d12;
+}
+
+/* ===== PROYECTOS ===== */
+.proyectos {
+    background: #0f1118;
+    border-radius: 20px;
+    display: grid;
+    gap: 25px;
+}
+
+.card {
+    background: #121520;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    border: 1px solid rgba(96,165,250,0.3);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h3 {
+    color: #6ee7b7;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #b1b7c6;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background: rgba(110,231,183,0.15);
+    color: #6ee7b7;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.card-links {
+    margin-top: 10px;
+}
+
+/* ===== CONTACTO ===== */
+.contacto {
+    text-align: center;
+}
+
+.contacto a {
+    color: #60a5fa;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: rgba(96,165,250,0.85);
+    backdrop-filter: blur(6px);
+    padding: 10px;
+    text-align: center;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+    .proyectos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
